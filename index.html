@@ -1,0 +1,53 @@
+<div class="dashboard-container">
+  <header>
+    <h1>Mittelstandsindex Dashboard</h1>
+    <div class="filters">
+      <div class="filter-group">
+        <label for="metric-select">Metrik:</label>
+        <select id="metric-select">
+          <option value="umsatz_vorjahr_bereinigt">Umsatz Veränderung (Vorjahr, bereinigt)</option>
+          <option value="umsatz_vormonat_bereinigt">Umsatz Veränderung (Vormonat, bereinigt)</option>
+          <option value="umsatz_vorjahr_ursprung">Umsatz Veränderung (Vorjahr, Ursprung)</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="timeframe-select">Zeitraum:</label>
+        <select id="timeframe-select">
+          <option value="1">Letztes Jahr</option>
+          <option value="2">Letzte 2 Jahre</option>
+          <option value="3">Letzte 3 Jahre</option>
+          <option value="5" selected>Letzte 5 Jahre</option>
+          <option value="all">Alle Daten</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  
+  <main>
+    <div class="chart-container">
+      <canvas id="main-chart"></canvas>
+    </div>
+    
+    <div class="stats-container">
+      <div class="stat-card" id="average-change">
+        <h3>Durchschnittliche Veränderung</h3>
+        <p class="stat-value">-</p>
+      </div>
+      <div class="stat-card" id="max-change">
+        <h3>Maximale Veränderung</h3>
+        <p class="stat-value">-</p>
+      </div>
+      <div class="stat-card" id="min-change">
+        <h3>Minimale Veränderung</h3>
+        <p class="stat-value">-</p>
+      </div>
+      <div class="stat-card" id="current-trend">
+        <h3>Aktuelle Tendenz</h3>
+        <p class="stat-value">-</p>
+      </div>
+    </div>
+  </main>
+  
+  <div id="loading">Daten werden geladen...</div>
+  <div id="error" style="display: none;">Fehler beim Laden der Daten.</div>
+</div>
